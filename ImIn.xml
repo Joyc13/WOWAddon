@@ -1,0 +1,15 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ UI.xsd">
+    <Frame name="ImInMainFrame" parent="UIParent" hidden="true" frameStrata="HIGH" enableMouse="true" movable="true">
+        <Size>
+            <AbsDimension x="500" y="400" />
+        </Size>
+        <Anchors>
+            <Anchor point="CENTER" />
+        </Anchors>
+        <!-- <Backdrop bgFile="Interface/DialogFrame/UI-DialogBox-Background" edgeFile="Interface/DialogFrame/UI-DialogBox-Border" tile="true"> -->
+            <!-- <EdgeSize> -->
+                <!-- <AbsValue val="16" /> -->
+            <!-- </EdgeSize> -->
+        <!-- </Backdrop> -->
+    </Frame>
+</Ui>

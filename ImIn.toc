@@ -1,0 +1,8 @@
+## Interface: 110005
+## Title: ImIn - Guild Member Info
+## Notes: Affiche les informations des membres de la guilde.
+## Author: Joyc
+## Version: 1.0
+## SavedVariables: ImInSavedVars
+ImIn.lua
+ImIn.xml
