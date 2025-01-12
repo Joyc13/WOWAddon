@@ -1,7 +1,7 @@
 -- Variables globales
 local frame
 local columnHeaders = { "Nom", "Rang", "Date d'arrivée", "Action" }
-local filterConnected = false -- Par défaut : afficher tous les membres
+local filterConnected = true -- Par défaut : afficher tous les membres
 local filterEthylotest = false -- Filtre les membres Ethylotest
 
 -- Fonction pour filtrer les membres par statut de connexion
@@ -249,7 +249,7 @@ local function CreateMainFrame()
     -- Cadre défilant pour les lignes du tableau
     local scrollFrame = CreateFrame("ScrollFrame", nil, tableFrame, "UIPanelScrollFrameTemplate")
     scrollFrame:SetPoint("TOPLEFT", tableFrame, "TOPLEFT", 0, -20)
-    scrollFrame:SetPoint("BOTTOMRIGHT", tableFrame, "BOTTOMRIGHT")
+    scrollFrame:SetPoint("BOTTOMRIGHT", tableFrame, "BOTTOMRIGHT",-20,0)
     local scrollChild = CreateFrame("Frame", nil, scrollFrame)
     scrollChild:SetSize(560, 1000)
     scrollFrame:SetScrollChild(scrollChild)
@@ -317,9 +317,9 @@ local function CreateMainFrame()
 	-- Ajoute la case à cocher pour filtrer par grade "Ethylotest"
 local function AddEthylotestFilterCheckbox(frame)
     local ethylotestCheckbox = CreateFrame("CheckButton", nil, frame, "UICheckButtonTemplate")
-    ethylotestCheckbox:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -10, 10)
+    ethylotestCheckbox:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -5, 10)
     ethylotestCheckbox.text = ethylotestCheckbox:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    ethylotestCheckbox.text:SetPoint("LEFT", ethylotestCheckbox, "RIGHT", 5, 0)
+    ethylotestCheckbox.text:SetPoint("RIGHT", ethylotestCheckbox, "RIGHT", -45, 0)
     ethylotestCheckbox.text:SetText("Filtrer 'Ethylotest'")
     ethylotestCheckbox:SetScript("OnClick", function(self)
         filterEthylotest = self:GetChecked()
